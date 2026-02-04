@@ -1,0 +1,135 @@
+/* ===== Footer Styles ===== */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-links h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--color-background);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-accent);
+}
+
+.social-media-icons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    fill: #b0b0b0;
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.social-media-icons a:hover .social-icon {
+    fill: var(--color-accent);
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    color: #888;
+    font-size: 0.9rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-bottom p {
+    color: #888;
+    margin: 0;
+}
+
+/* ==== Mobile Queries ==== */
+@media (max-width: 768px) {
+    footer {
+        padding: 2rem 1.5rem 1rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer-links h5 {
+        font-size: 1rem;
+    }
+
+    .social-media-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 1.5rem 1rem 0.75rem;
+        margin-top: 2rem;
+    }
+
+    .footer-container {
+        gap: 1rem;
+    }
+
+    .footer-links h5 {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-links li {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .social-media-icons {
+        gap: 1rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+}
