@@ -1,0 +1,8 @@
+/* Contact page specific styles */
+.contact-cta .contact-container { max-width: 720px; margin: 0 auto; }
+
+.contact-form {
+    display: grid; gap: 0.75rem; margin-top: 1rem;
+}
+
+.contact-form input, .contact-form textarea { padding: 0.75rem; border-radius: 6px; border: 1px solid var(--color-divider); }

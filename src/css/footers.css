@@ -17,7 +17,6 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-links h5 {
@@ -75,6 +74,32 @@ footer {
 .footer-bottom p {
     color: #888;
     margin: 0;
+}
+
+.footer-legal {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 1.5rem;
+}
+
+.footer-legal p {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.footer-legal a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
 }
 
 /* ==== Mobile Queries ==== */

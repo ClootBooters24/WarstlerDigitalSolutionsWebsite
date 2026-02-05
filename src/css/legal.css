@@ -1,0 +1,109 @@
+/* ===== Legal Pages Styles ===== */
+
+.legal-page {
+    padding-top: 2rem;
+}
+
+.legal-content {
+    max-width: 900px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.legal-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 0.5rem;
+}
+
+.legal-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-primary);
+}
+
+.legal-content p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.legal-content ul,
+.legal-content ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.legal-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.legal-content a {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.legal-content a:hover {
+    color: var(--color-primary);
+}
+
+.last-updated {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+    .legal-content {
+        font-size: 0.95rem;
+    }
+
+    .legal-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .legal-content h3 {
+        font-size: 1.15rem;
+    }
+
+    .last-updated {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .legal-content {
+        font-size: 0.9rem;
+    }
+
+    .legal-content h2 {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+    }
+
+    .legal-content h3 {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .legal-content p {
+        text-align: left;
+    }
+
+    .legal-content ul,
+    .legal-content ol {
+        margin-left: 1.5rem;
+    }
+
+    .legal-content li {
+        font-size: 0.9rem;
+    }
+}
