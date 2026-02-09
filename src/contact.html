@@ -42,9 +42,186 @@
                 </div>
             </section>
 
-            <section class="contact-cta">
-                <div class="section-container contact-container">
-                    <p>Contact page content coming soon.</p>
+            <section class="">
+                <div class="form-section">
+                    <h2 class="form-section-title">What can we help with?</h2>
+                    
+                    <div class="application-type-toggle" role="radiogroup" aria-label="Application type">
+                        <div class="type-option">
+                            <input type="radio" id="type-website" name="applicationType" value="Website Project" class="type-radio" required>
+                            <label for="type-website" class="type-label">
+                                <h3>Website Project</h3>
+                                <p>New site, redesign, or feature upgrades for your business.</p>
+                            </label>
+                        </div>
+                        <div class="type-option">
+                            <input type="radio" id="type-it" name="applicationType" value="IT Support" class="type-radio" required>
+                            <label for="type-it" class="type-label">
+                                <h3>IT Support</h3>
+                                <p>Ongoing help, troubleshooting, and tech support.</p>
+                            </label>
+                        </div>
+                        <div class="type-option">
+                            <input type="radio" id="type-consult" name="applicationType" value="Consulting / Other" class="type-radio" required>
+                            <label for="type-consult" class="type-label">
+                                <h3>Consulting / Other</h3>
+                                <p>Strategy, audits, or a custom request.</p>
+                            </label>
+                        </div>
+                    </div>
+
+                    <form class="form" id="Form" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Dynamic access_key will be set by JavaScript -->
+                        <input type="hidden" name="access_key" id="access_key" value="">
+                        <input type="hidden" name="subject" id="form_subject" value="Contact Form">
+                        <input type="hidden" name="application_type" id="application_type" value="">
+                        <input type="checkbox" name="botcheck" id="" style="display: none;">
+                        <input type="hidden" name="from_name" value="Warstler Digital Solutions">
+                        
+                        <fieldset>
+                            <legend class="form-legend">Personal Information</legend>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name <span class="required">*</span></label>
+                                    <input type="text" id="firstName" name="firstName" required maxlength="50" autocomplete="given-name">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="lastName">Last Name <span class="required">*</span></label>
+                                    <input type="text" id="lastName" name="lastName" required maxlength="50" autocomplete="family-name">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required maxlength="100" autocomplete="email">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone Number <span class="required">*</span></label>
+                                    <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required pattern="[0-9\-\(\)\s]+" maxlength="20" autocomplete="tel">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend class="form-legend">Business & Project</legend>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="company">Business / Organization</label>
+                                    <input type="text" id="company" name="company" maxlength="100" autocomplete="organization">
+                                </div>
+                                <div class="form-group">
+                                    <label for="website">Current Website</label>
+                                    <input type="url" id="website" name="website" placeholder="https://" maxlength="200" autocomplete="url">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Services Needed</label>
+                                <div class="checkbox-grid" id="services">
+                                    <label class="checkbox-item" for="service-design">
+                                        <input type="checkbox" id="service-design" name="services[]" value="Custom Design">
+                                        Custom Design
+                                    </label>
+                                    <label class="checkbox-item" for="service-development">
+                                        <input type="checkbox" id="service-development" name="services[]" value="Development">
+                                        Development
+                                    </label>
+                                    <label class="checkbox-item" for="service-seo">
+                                        <input type="checkbox" id="service-seo" name="services[]" value="SEO Setup">
+                                        SEO Setup
+                                    </label>
+                                    <label class="checkbox-item" for="service-hosting">
+                                        <input type="checkbox" id="service-hosting" name="services[]" value="Hosting / Maintenance">
+                                        Hosting / Maintenance
+                                    </label>
+                                    <label class="checkbox-item" for="service-it">
+                                        <input type="checkbox" id="service-it" name="services[]" value="IT Support">
+                                        IT Support
+                                    </label>
+                                    <label class="checkbox-item" for="service-consulting">
+                                        <input type="checkbox" id="service-consulting" name="services[]" value="Consulting">
+                                        Consulting
+                                    </label>
+                                </div>
+                                <p class="help-text">Select all that apply.</p>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="budget">Estimated Budget</label>
+                                    <select id="budget" name="budget">
+                                        <option value="">Select a range</option>
+                                        <option value="Under $1k">Under $1k</option>
+                                        <option value="$1k-$3k">$1k-$3k</option>
+                                        <option value="$3k-$7k">$3k-$7k</option>
+                                        <option value="$7k-$15k">$7k-$15k</option>
+                                        <option value="$15k+">$15k+</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="timeline">Timeline</label>
+                                    <select id="timeline" name="timeline">
+                                        <option value="">Select a timeline</option>
+                                        <option value="ASAP">ASAP</option>
+                                        <option value="2-4 weeks">2-4 weeks</option>
+                                        <option value="1-3 months">1-3 months</option>
+                                        <option value="Flexible">Flexible</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactMethod">Preferred Contact Method</label>
+                                    <select id="contactMethod" name="contact_method">
+                                        <option value="">Select a method</option>
+                                        <option value="Email">Email</option>
+                                        <option value="Phone">Phone</option>
+                                        <option value="Text">Text</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bestTime">Best Time to Reach You</label>
+                                    <input type="text" id="bestTime" name="best_time" maxlength="80" placeholder="Weekdays after 3 PM">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Project Details <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="6" required maxlength="1500" placeholder="Tell us about your goals, must-have features, and anything else we should know."></textarea>
+                            </div>
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend class="form-legend">Additional Information</legend>
+                            
+                            <div class="form-group checkbox-agreement">
+                                <label for="agreement">
+                                    <input type="checkbox" id="agreement" name="agreement" required>
+                                    I agree to the <a href="/legal/terms-of-service" target="_blank" rel="noopener noreferrer">Terms of Service</a> and <a href="/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>. <span class="required">*</span>
+                                </label>
+                            </div>
+                        </fieldset>
+                        
+                        <div class="form-note">
+                            <p><strong>Important:</strong> Please do not share passwords or sensitive financial information in this form.</p>
+                        </div>
+
+                        <div id="form-message" class="form-message" style="display: none;"></div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn-submit" id="submitBtn">
+                                <span class="btn-text">Submit Application</span>
+                                <span class="btn-loader" style="display: none;">Sending...</span>
+                            </button>
+                            <button type="reset" class="btn-reset">Clear Form</button>
+                        </div>
+                    </form>
                 </div>
             </section>
         </main>
@@ -90,5 +267,6 @@
         </footer>
 
         <script src="js/index.js"></script>
+        <script src="js/contact.js"></script>
     </body>
 </html>
