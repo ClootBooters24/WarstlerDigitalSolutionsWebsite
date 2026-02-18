@@ -1,7 +1,0 @@
-/* Services page specific styles */
-.services-overview .pricing-card {
-    border-left-color: var(--color-accent);
-}
-
-/* small utility */
-.centered { text-align: center; }

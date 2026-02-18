@@ -1,7 +1,8 @@
 # Redirect .html versions to clean URLs
 /index.html             /                   301
 /portfolio.html         /portfolio          301
-/services.html          /services           301
+/services.html          /contact            301
+/services               /contact            301
 /about.html             /about              301
 /contact.html           /contact            301
 
