@@ -163,10 +163,10 @@ main {
     text-align: left;
 }
 
-.service-card:hover {
+/* .service-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+} */
 
 .service-card h3 {
     font-size: 1.25rem;
@@ -206,10 +206,10 @@ main {
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.testimonial-card:hover {
+/* .testimonial-card:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
-}
+} */
 
 .testimonial-card p {
     font-size: 1rem;
