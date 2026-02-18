@@ -2,3 +2,9 @@
 .about-page { padding-top: 2rem; }
 
 .about-copy p { margin-bottom: 0.75rem; }
+
+@media (max-width: 900px) {
+	.about-page .about-grid {
+		grid-template-columns: 1fr;
+	}
+}
