@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+const initContactForm = () => {
     const form = document.getElementById('Form');
     const applicationTypeInput = document.getElementById('application_type');
     const subjectInput = document.getElementById('form_subject');
@@ -6,11 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submitBtn');
     const formMessage = document.getElementById('form-message');
 
-    if (!form || !applicationTypeInput || !subjectInput || typeRadios.length === 0) {
+    if (!form || !applicationTypeInput || !subjectInput || typeRadios.length === 0 || !submitBtn || !formMessage) {
         return;
     }
 
     const baseSubject = subjectInput.value || 'Contact Form';
+    let preserveMessageOnReset = false;
 
     const syncApplicationType = (value) => {
         applicationTypeInput.value = value || '';
@@ -53,6 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('reset', () => {
         window.setTimeout(() => {
             syncApplicationType('');
+
+            if (preserveMessageOnReset) {
+                preserveMessageOnReset = false;
+                return;
+            }
+
             hideMessage();
         }, 0);
     });
@@ -77,8 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok && result.success) {
                 showMessage('Thank you! Your message has been sent successfully. We\'ll get back to you soon.', 'success');
+                preserveMessageOnReset = true;
                 form.reset();
-                syncApplicationType('');
             } else {
                 showMessage(result.message || 'There was a problem sending your message. Please try again.', 'error');
             }
@@ -88,4 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
             setLoading(false);
         }
     });
-});
+};
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initContactForm);
+} else {
+    initContactForm();
+}
